@@ -38,7 +38,7 @@ def convert_json_to_dataframe(json_data):
     df.sort_index(inplace=True)
     return df
 
-def prediction(stock, n=7):
+def predict(stock, n=7):
 
     json_data = get_stock_data_in_json(stock)
     df = convert_json_to_dataframe(json_data)
