@@ -38,10 +38,9 @@ def convert_json_to_dataframe(json_data):
     df.sort_index(inplace=True)
     return df
 
-def predict(stock, n=7):
-
+def predict(inp, n=7):
+    stock = inp['stock']
     json_data = get_stock_data_in_json(stock)
-    print(json_data.keys())
     df = convert_json_to_dataframe(json_data)
     header = json_data["Meta Data"]
     
