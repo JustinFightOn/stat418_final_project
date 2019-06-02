@@ -2,6 +2,6 @@ scikit-learn
 pandas
 numpy
 Flask
-scipy
+scipy==1.2.0
 requests
 pmdarima
