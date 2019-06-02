@@ -13,7 +13,7 @@ import urllib.parse
 import numpy as np
 from pmdarima.arima import auto_arima
 
-with open('api_key.txt', 'r') as f:
+with open('scripts/api_key.txt', 'r') as f:
     api_key = f.read()
 main_url = 'https://www.alphavantage.co/query?'
 
