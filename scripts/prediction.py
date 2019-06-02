@@ -32,7 +32,7 @@ def get_stock_data_in_json(stock):
     return json.loads(response.content)
 
 def convert_json_to_dataframe(json_data):
-    df = pd.DataFrame(json_data['Time Series (Daily)']).T
+    df = pd.DataFrame(json_data["Time Series (Daily)"]).T
     df.columns = ['open', 'high', 'low', 'close', 'volume']
     df = df.apply(pd.to_numeric)
     df.sort_index(inplace=True)
@@ -42,7 +42,7 @@ def predict(stock, n=7):
 
     json_data = get_stock_data_in_json(stock)
     df = convert_json_to_dataframe(json_data)
-    header = json_data['Meta Data']
+    header = json_data["Meta Data"]
     
     high = df.iloc[:,1]
         
