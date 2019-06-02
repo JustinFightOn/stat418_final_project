@@ -22,3 +22,8 @@ The result should be:
 You can change the `AMZN` to any stocks of your choice, the followings are some famous stocks:
 
 ` GOOGL`, ` FB`, `AMZN`, ` AAPL`, `MSFT`, `ROKU`
+
+## Contents:
+There are 3 folders in this repository: `docker`, `scripts`, and `writeup`. Folder `docker` contains information about the docker container. Folder `scripts` contains the Python code that pulls data, transforms the data, makes prediction, and sets up the server for the API. Folder `writeup` contains the presentation pdfs of the project.
+
+Further details would be given in each folder.
