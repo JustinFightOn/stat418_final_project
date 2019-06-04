@@ -1,7 +1,7 @@
-# Stock Prediction API
+# Stock Prediction Flask API
 This is an API using the auto.arima method in Pythonís pmdarima  package to fit a ARIMA model with the best (lowest) AIC score on the univariate time series stock data of User's interest to predict the selected stock's next N (default 7) business days' daily high prices. The data is pulling alphavantage using a given API, which returns the last 100 daysí stock price of the selected stocks.
 
-The model is written in Python, and it is wrapped in a docker container for reproduction purpose. Finally, it is hosted on an EC2 instance that everyone can access it.
+The model is written in Python, and it is wrapped in a docker container for reproduction purpose. Finally, it is hosted on an EC2 instance through Flask that everyone can access it.
 
 To run this API, just open a new terminal and paste the following address:
 
@@ -15,7 +15,7 @@ Finally, to get stock predictions, here is sample input into the model:
 
 `curl -H "Content-Type: application/json" -X POST -d '{"stock": "AMZN"}' "http://ec2-54-219-132-146.us-west-1.compute.amazonaws.com:5000/stock"`
 
-The result should be:
+The result should include the stock name, forecasted stock price of next 7 business days, last refreshed date, and previous 7 days' stock price:
 
 `{
   "Forecasted Stock Price": {
