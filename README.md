@@ -5,7 +5,7 @@ The model is written in Python, and it is wrapped in a docker container for repr
 
 To run this API, just open a new terminal and paste the following address:
 
-`curl http://ec2-54-219-132-146.us-west-1.compute.amazonaws.com:5000/`
+`curl http://ec2-54-183-57-7.us-west-1.compute.amazonaws.com:5000/`
 
 It should return:
 
@@ -13,7 +13,7 @@ It should return:
 
 Finally, to get stock predictions, here is sample input into the model:
 
-`curl -H "Content-Type: application/json" -X POST -d '{"stock": "AMZN"}' "http://ec2-54-219-132-146.us-west-1.compute.amazonaws.com:5000/stock"`
+`curl -H "Content-Type: application/json" -X POST -d '{"stock": "AMZN"}' "http://ec2-54-183-57-7.us-west-1.compute.amazonaws.com:5000/stock"`
 
 The result should include the stock name, forecasted stock price of next 7 business days, last refreshed date, and previous 7 days' stock price:
 
