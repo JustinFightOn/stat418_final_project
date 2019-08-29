@@ -15,6 +15,10 @@ Finally, to get stock predictions, here is sample input into the model:
 
 `curl -H "Content-Type: application/json" -X POST -d '{"stock": "AMZN"}' "http://ec2-54-183-57-7.us-west-1.compute.amazonaws.com:5000/stock"`
 
+If above input not working, try the sample input below:
+
+`curl -H "Content-Type: application/json" -X POST -d “{\"stock\": \"AMZN\"}” "http://ec2-54-183-57-7.us-west-1.compute.amazonaws.com:5000/stock"`
+
 The result should include the stock name, forecasted stock price of next 7 business days, last refreshed date, and previous 7 days' stock price:
 
 `{
